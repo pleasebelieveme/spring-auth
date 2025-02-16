@@ -61,6 +61,7 @@ public class JwtUtil {  // JwtProvider라고 네이밍을 하기도 함
     // 생성된 JWT를 Cookie에 저장
     public void addJwtToCookie(String token, HttpServletResponse res) {
         try {
+            // UrlEncoder는 " "을 +로 바꿈 -> 실재 +와 혼동이 생기기에 "%20"다시 변환
             token = URLEncoder.encode(token, "utf-8").replaceAll("\\+", "%20"); // Cookie Value 에는 공백이 불가능해서 encoding 진행
 
             Cookie cookie = new Cookie(AUTHORIZATION_HEADER, token); // Name-Value
