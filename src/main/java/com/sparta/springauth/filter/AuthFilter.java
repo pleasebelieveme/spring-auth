@@ -14,7 +14,7 @@ import org.springframework.util.StringUtils;
 import java.io.IOException;
 
 @Slf4j(topic = "AuthFilter")
-@Component
+//@Component // 시큐리티를 적용하면 필터들을 방해할 가능성이 있음
 @Order(2)
 public class AuthFilter implements Filter {
 
