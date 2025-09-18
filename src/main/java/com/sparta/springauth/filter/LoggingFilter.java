@@ -11,7 +11,7 @@ import java.io.IOException;
 @Slf4j(topic = "LoggingFilter")
 //@Component // 시큐리티를 적용하면 필터들을 방해할 가능성이 있음
 @Order(1)
-public class LoggingFilter implements Filter {
+public class  LoggingFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         // 전처리
