@@ -35,6 +35,9 @@ public class UserController {
         return "redirect:/api/user/login-page";
     }
 
+    /*
+    JwtAuthenticationFilter에서 로그인 처리
+
     @PostMapping("/user/login")
     public String login(LoginRequestDto requestDto, HttpServletResponse res) {
         try {
@@ -44,4 +47,5 @@ public class UserController {
         }
         return "redirect:/";
     }
+     */
 }
