@@ -59,6 +59,9 @@ public class UserService {
         userRepository.save(user);
     }
 
+    /*
+    JwtAuthenticationFilter에서 로그인 처리
+
     public void login(LoginRequestDto requestDto, HttpServletResponse res) {
         String username = requestDto.getUsername();
         String password = requestDto.getPassword();
@@ -77,4 +80,5 @@ public class UserService {
         String token = jwtUtil.createToken(findUser.getUsername(), findUser.getRole());
         jwtUtil.addJwtToCookie(token, res);
     }
+     */
 }
